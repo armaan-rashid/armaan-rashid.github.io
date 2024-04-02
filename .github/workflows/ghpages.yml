@@ -34,7 +34,7 @@ Github-Pages-Release:
     - name: Install nightly Rust
         uses: dtolnay/rust-toolchain@nightly
         with:
-        components: clippy, rustfmt
+            components: clippy, rustfmt
 
     - name: Add WASM target
         run: rustup target add wasm32-unknown-unknown
