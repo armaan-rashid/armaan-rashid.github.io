@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "pearl-string": "url('public/PearlString.svg')",
+        "pearl-string": "url('public/CodeIcons/PearlString.svg')",
       },
       colors: {
         background: "#f7f0dd",
@@ -17,6 +17,10 @@ module.exports = {
         rust: "#FF8C38",
         codeview: "#1C1A1A",
         light: "#D9D9D9",
+        haskelldark: "#7844FC",
+        swiftdark: "#E24D39",
+        rustdark: "#E6843C",
+        pythondark: "#22B6F5",
       },
       fontFamily: {
         lexend: ["Lexend", "sans-serif"],

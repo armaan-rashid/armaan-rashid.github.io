@@ -2,6 +2,11 @@ use crate::components::code_icons::*;
 use crate::components::navbar::*;
 use leptos::*;
 
+pub mod haskell;
+pub mod python;
+pub mod rust;
+pub mod swift;
+
 static SIDEBAR_LINKS: [(&'static str, &'static str); 3] =
     [("About", "/about"), ("Code", "/code"), ("Home", "/")];
 
