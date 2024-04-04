@@ -3,6 +3,7 @@ use crate::components::navbar::*;
 use leptos::*;
 
 pub mod haskell;
+pub mod portfolio;
 pub mod python;
 pub mod rust;
 pub mod swift;

@@ -162,12 +162,12 @@ pub fn CodeIcon(
     lang: LanguageIcon,
     #[prop(default = "#D9D9D9")] fill: &'static str,
     #[prop(optional)] stroke: &'static str,
+    #[prop(default = "60%")] scale: &'static str,
 ) -> impl IntoView {
     let LanguageIconData { width, height, .. } = lang.icon_data();
-    let s = "60%";
     view! {
-            <svg //width=s
-                 //height=s
+            <svg width=scale
+                 // height=scale
                  viewBox={format!("0 0 {} {}", width, height)}
                  fill={fill}
                  stroke={stroke}
@@ -220,19 +220,19 @@ pub fn LanguageStack(lang_name: WriteSignal<&'static str>) -> impl IntoView {
     let no_name = move |_: MouseEvent| lang_name("");
     view! {
         <div class="flex flex-col gap-12 l-12">
-            <a href="/code/rust"><CodeIconPop on:mouseover=rust_name
+            <a href="/code/portfolio#rust"><CodeIconPop on:mouseover=rust_name
                       on:mouseleave=no_name
                       init_height=Some(TRUNC_HEIGHT)
             lang=LanguageIcon::Rust/></a>
-            <a href="/code/python"><CodeIconPop on:mouseover=python_name
+            <a href="/code/portfolio#python"><CodeIconPop on:mouseover=python_name
                       on:mouseleave=no_name
                       init_height=Some(TRUNC_HEIGHT)
                       lang=LanguageIcon::Python/></a>
-            <a href="/code/haskell"><CodeIconPop on:mouseover=haskell_name
+            <a href="/code/portfolio#haskell"><CodeIconPop on:mouseover=haskell_name
                       on:mouseleave=no_name
                       init_height=Some(TRUNC_HEIGHT)
                       lang=LanguageIcon::Haskell/></a>
-            <a href="/code/swift"><CodeIconPop on:mouseover=swift_name
+            <a href="/code/portfolio#swift"><CodeIconPop on:mouseover=swift_name
                       on:mouseleave=no_name
                       init_height=Some(TRUNC_HEIGHT)
                       lang=LanguageIcon::Swift/></a>

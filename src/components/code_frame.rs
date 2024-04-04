@@ -15,6 +15,9 @@ pub struct Project {
     pub name: &'static str,
     pub link: &'static str,
     pub img: &'static str,
+    pub alt: &'static str,
+    pub width: u32,
+    pub height: u32,
     pub description: &'static str,
 }
 
@@ -24,7 +27,6 @@ pub fn CodePage(lang: LanguageIcon, projects: Vec<Project>) -> impl IntoView {
     <div class=format!("flex flex-col lg:flex-row md:justify-between h-dvh w-dvh p-6 {}", lang.bg_color())>
         <div class="flex flex-col min-h-0 min-w-lg md:justify-between justify-around">
             <CodeIcon lang=lang />
-            <a class="hover:fill-black" href="/code"><CodeArrow/></a>
         </div>
         <ProjectSlider lang=lang projects=projects/>
     </div>
@@ -55,13 +57,16 @@ pub fn ProjectPanel(p: Project) -> impl IntoView {
         name,
         link,
         img,
+        alt,
+        width,
+        height,
         description,
     } = p;
     view! {
         <div class="bg-codeview flex flex-col gap-6 p-6 max-h-xl">
             <a href={link}><h1 class="hover:underline font-lexend font-normal text-3xl text-light">{name}</h1></a>
-            <img src={img}/>
-            <p class="copy text-light overflow-scroll">{description}</p>
+            <img src={img} alt={alt} height="auto" width="100%"/>
+            <p class="copy text-light overflow-scroll" inner_html={description}></p>
         </div>
     }
 }

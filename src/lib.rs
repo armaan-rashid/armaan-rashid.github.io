@@ -9,6 +9,7 @@ mod pages;
 // Top-Level pages
 use crate::pages::about::About;
 use crate::pages::code::haskell::Haskell;
+use crate::pages::code::portfolio::Portfolio;
 use crate::pages::code::python::Python;
 use crate::pages::code::rust::Rust;
 use crate::pages::code::swift::Swift;
@@ -38,10 +39,7 @@ pub fn App() -> impl IntoView {
                 <Route path="/home" view=Home/>
                 <Route path="/about" view=About/>
                 <Route path="/code" view=Code/>
-                    <Route path="/code/haskell" view=Haskell/>
-                    <Route path="/code/rust" view=Rust/>
-                    <Route path="/code/swift" view=Swift/>
-                    <Route path="/code/python" view=Python/>
+                <Route path="/code/portfolio" view=Portfolio/>
                 <Route path="/dummy" view=Dummy/>
                 <Route path="/*" view=NotFound/>
             </Routes>

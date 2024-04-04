@@ -8,7 +8,10 @@ pub fn Haskell() -> impl IntoView {
         name: "BNFCSwift",
         link: "https://github.com/armaan-rashid/BNFCSwift",
         img: "ProjectImages/BNFCSwift.png",
-        description: "The awesome BNFC program generates parsers for languages that are specified by grammar rules like the ones shown above. You can give just these simple rules in a nice syntax and BNFC can generate parsers for you in Haskell, Agda, C++, even Tree-sitter grammars.
+        alt: "A picture of some grammar rules that get converted by the BNFC program.",
+        width: 1844,
+        height: 696,
+        description: "The awesome <a href=\"https://hackage.haskell.org/package/BNFC\">BNFC</a> program generates parsers for languages that are specified by grammar rules like the ones shown above. You can give just these simple rules in a nice syntax and BNFC can generate parsers for you in Haskell, Agda, C++, even Tree-sitter grammars.
         @filbertphang and I added a backend for this in Swift’s ultra-fast Lotsawa parser. It hasn’t been merged yet into the main BNFC codebase but you can import it as a separate module  which depends on BNFC if you want to use it."
     }];
     view! {<CodePage lang=LanguageIcon::Haskell projects=projects/>}
